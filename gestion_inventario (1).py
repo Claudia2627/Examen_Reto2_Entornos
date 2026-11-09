@@ -47,7 +47,7 @@ def fn_ClasificarStock_str(stock_int, minimo_int):
     """
     if stock_int == 0:
         estado_str = "AGOTADO"
-    elif stock_int <= minimo_int:
+    elif stock_int <= 3: #He cambiado minimo_int por un 3, ya que es el mínimo
         estado_str = "BAJO"
     else:
         estado_str = "OK"
