@@ -64,9 +64,9 @@ def fn_ProductosAReponer_lst(productos_lst):
     a_reponer_lst = []
 
     for producto_dic in productos_lst:
-        bajo_bool = producto_dic["stock"] <= producto_dic["minimo"]
+        bajo_bool = producto_dic["stock"] <= producto_dic["minimo"] 
 
-        if bajo_bool or producto_dic["pendiente"]: #He quitado el "not"
+        if bajo_bool or producto_dic["pendiente"]: #He quitado el "not". Al eliminar el "not" aparecen los productos que hay que reponer, pero me falta el ratón. Sé que al principio había que eliminarlo, ya que era el único con stock 0, pero no sé como volver a añadirlo a la lista de productos a reponer.
             a_reponer_lst.append(producto_dic["nombre"])
 
     return a_reponer_lst
